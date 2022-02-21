@@ -22,7 +22,16 @@
         <h1>Choose a Currency</h1>
     </main>
 
-
+    <form onscroll="return getRates()">
+        <label for="currency" class="form-label">Currency</label>
+        <select id="currency" class="form-select">
+            <option selected>USD</option>
+            <option>EUR</option>
+            <option>AUD</option>
+            <option>GBP</option>
+            <option>CAD</option>
+        </select>
+    </form>
 
 
     <footer class="mt-auto text-white-50" />
