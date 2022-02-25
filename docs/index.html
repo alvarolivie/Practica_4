@@ -12,6 +12,8 @@
   <center>
     <br>
     <br>
+    <div class="container">
+    <form class="row g-3">
       <select id="currency" class="form-select">
           <option value = "USD">USD</option>
           <option value = "EUR">EUR</option>
@@ -20,11 +22,15 @@
           <option value = "CAD">CAD</option>
       </select>
       <input type="button" onclick="return getRates()" value="find exchanges"/>
+    </form>
+  </div>
     <br>
     <br>
-    <table>
+    <div class="container">
+      <table id="table" >
 
-    </table>
+      </table>
+    </div>
   </center>
 </body>
 <script src="index.js"></script>

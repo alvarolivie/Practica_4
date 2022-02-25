@@ -7,6 +7,7 @@ async function getRates() {
     url += currency;
     //console.log(url)
     let response = await fetch(url);
+    let tdata = "";
 
     if (response.ok){
     let res = await response.json();
@@ -14,10 +15,11 @@ async function getRates() {
     for (let i = 0; i < price.length; i++) {
       if (curr[i]!=currency){
         price[i] = rates[curr[i]];
-        var d1 = document.getElementById('one');
-        d1.insertAdjacentHTML('beforeend', <div id="two">two</div>);
+        tdata += '<tr><td>'+curr[i]+'</td><td>'+price[i]+'</td></tr><br>'
       }
     }
+    let start = '<tr><th>Exchange Rates</th></tr><br>';
+    document.getElementById("table").innerHTML = start + tdata;
     console.log(price);
     }
     return 0;
