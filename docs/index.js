@@ -18,7 +18,8 @@ async function getRates() {
     }
     let start = '<tr><th><h2 class="fw-bolder text-white">Exchange Rates</h2></th></tr><br>';
     document.getElementById("table").innerHTML = start + tdata;
-    }
+  }
+  
     return 0;
 
 }
