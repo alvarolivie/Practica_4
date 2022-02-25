@@ -13,10 +13,10 @@ async function getRates() {
     let rates = res.conversion_rates;
     for (let i = 0; i < curr.length; i++) {
       if (curr[i]!=currency){
-        tdata += '<tr><td>'+curr[i]+'</td><td>'+rates[curr[i]]+'</td></tr><br>'
+        tdata += '<tr><td class="text-white">'+curr[i]+'</td><td class="text-white">'+rates[curr[i]]+'</td></tr><br>'
       }
     }
-    let start = '<tr><th>Exchange Rates</th></tr><br>';
+    let start = '<tr><th class="text-white">Exchange Rates</th></tr><br>';
     document.getElementById("table").innerHTML = start + tdata;
     }
     return 0;
